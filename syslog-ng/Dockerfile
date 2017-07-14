@@ -31,7 +31,7 @@ RUN apt-get update -qq && \
     apt-get autoclean -y -qq && \
     rm -rf /var/lib/apt/lists/* 
 
-COPY syslog-ng.conf /etc/syslog-ng/
+ADD syslog-ng.conf /etc/syslog-ng/
 
 EXPOSE 514/udp
 EXPOSE 601/tcp
