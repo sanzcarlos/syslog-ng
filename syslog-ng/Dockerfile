@@ -34,7 +34,7 @@ RUN apt-get update -qq && \
 COPY syslog-ng.conf /etc/syslog-ng/
 
 EXPOSE 514/udp
-EXPOSE 601
-# EXPOSE 6514
+EXPOSE 601/tcp
+# EXPOSE 6514/tcp
 
 ENTRYPOINT ["/usr/sbin/syslog-ng", "-F"]
