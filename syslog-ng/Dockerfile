@@ -1,6 +1,5 @@
 # Version: 3.8.1
 
-# Establece la imagen de base a utilizar para debian
 FROM debian:stable-slim
 
 MAINTAINER Carlos Sanz <carlos.sanzpenas@gmail.com>
