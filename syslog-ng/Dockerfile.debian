@@ -7,7 +7,7 @@ MAINTAINER Carlos Sanz <carlos.sanzpenas@gmail.com>
 LABEL vendor=Personal \ 
       com.example.is-beta= \
       com.example.is-production="" \
-      com.example.version="3.13.2" \
+      com.example.version="3.8" \
       com.example.release-date="2016-11-30"
 
 RUN apt-get update -qq && \
