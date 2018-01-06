@@ -1,0 +1,21 @@
+FROM alpine:3.7
+
+MAINTAINER Carlos Sanz <carlos.sanzpenas@gmail.com>
+
+LABEL vendor=Personal \
+      com.example.is-beta= \
+      com.example.is-production="" \
+      com.example.version="3.9.1-r3" \
+      com.example.release-date="2018-01-05"
+
+RUN apk update && \
+    apk upgrade && \
+    apk add syslog-ng
+
+ADD *.conf /etc/syslog-ng/
+
+EXPOSE 514/udp
+EXPOSE 601/tcp
+EXPOSE 6514/tcp
+
+ENTRYPOINT ["/usr/sbin/syslog-ng", "-F"]
