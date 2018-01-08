@@ -4,11 +4,12 @@ FROM debian:sid-slim
 
 MAINTAINER Carlos Sanz <carlos.sanzpenas@gmail.com>
 
-LABEL vendor=Personal \ 
-      com.example.is-beta= \
-      com.example.is-production="" \
-      com.example.version="3.13.2" \
-      com.example.release-date="2016-11-30"
+LABEL org.label-schema.vendor = "Personal" \
+      org.label-schema.name = "Syslog-NG" \
+      org.label-schema.version = "3.13.2-sid" \
+      org.label-schema.docker.cmd = "docker run -p 514:514 sanzcarlos/syslog-ng:3.13.2-sid" \
+      org.label-schema.name = "Syslog-NG" \
+      org.label-schema.build-date = "2018-01-08"
 
 RUN apt-get update -qq && \
     apt-get dist-upgrade -y -qq && \
@@ -17,7 +18,7 @@ RUN apt-get update -qq && \
     apt-get autoclean -y -qq && \
     rm -rf /var/lib/apt/lists/* 
 
-ADD https://raw.githubusercontent.com/sanzcarlos/syslog-ng/master/syslog-ng/syslog-ng.debian.conf /etc/syslog-ng/syslog-ng.conf
+ADD syslog-ng.conf /etc/syslog-ng/syslog-ng.conf
 
 EXPOSE 514/udp
 EXPOSE 601/tcp
