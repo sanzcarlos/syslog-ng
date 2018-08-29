@@ -1,4 +1,4 @@
-FROM alpine:3.7
+FROM alpine:3.8
 
 MAINTAINER Carlos Sanz <carlos.sanzpenas@gmail.com>
 
@@ -7,7 +7,7 @@ LABEL org.label-schema.vendor = "Personal" \
       org.label-schema.version = "3.9-alpine" \
       org.label-schema.docker.cmd = "docker run -p 514:514 sanzcarlos/syslog-ng:3.9-alpine" \
       org.label-schema.name = "Syslog-NG" \
-      org.label-schema.build-date = "2018-01-05"
+      org.label-schema.build-date = "2018-08-29"
 
 RUN apk update && \
     apk upgrade && \
