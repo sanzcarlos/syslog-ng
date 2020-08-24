@@ -14,7 +14,7 @@ RUN apk update && \
     apk add syslog-ng && \
     rm -rf /var/cache/apk/*
 
-ADD https://raw.githubusercontent.com/sanzcarlos/syslog-ng/master/syslog-ng/alpine/syslog-ng.conf /etc/syslog-ng/syslog-ng.conf
+ADD https://raw.githubusercontent.com/sanzcarlos/syslog-ng/master/syslog-ng.conf /etc/syslog-ng/syslog-ng.conf
 
 EXPOSE 514/udp
 EXPOSE 601/tcp
