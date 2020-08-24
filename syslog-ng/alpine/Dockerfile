@@ -1,4 +1,4 @@
-FROM alpine:3.10
+FROM alpine
 
 MAINTAINER Carlos Sanz <carlos.sanzpenas@gmail.com>
 
@@ -11,7 +11,8 @@ LABEL org.label-schema.vendor = "Personal" \
 
 RUN apk update && \
     apk upgrade && \
-    apk add syslog-ng
+    apk add syslog-ng && \
+    rm -rf /var/cache/apk/*
 
 ADD https://raw.githubusercontent.com/sanzcarlos/syslog-ng/master/syslog-ng/alpine/syslog-ng.conf /etc/syslog-ng/syslog-ng.conf
 
