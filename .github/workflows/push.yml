@@ -1,5 +1,5 @@
 on: push
-name: docker
+name: Docker - syslog-ng
 jobs:
   deploy:
     name: syslog
