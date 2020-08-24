@@ -4,10 +4,10 @@ MAINTAINER Carlos Sanz <carlos.sanzpenas@gmail.com>
 
 LABEL org.label-schema.vendor = "Personal" \
       org.label-schema.name = "Syslog-NG" \
-      org.label-schema.version = "3.19.1-r1" \
+      org.label-schema.version = "3.27.1-r0" \
       org.label-schema.docker.cmd = "docker run -p 514:514 sanzcarlos/syslog-ng:alpine" \
-      org.label-schema.url = "https://pkgs.alpinelinux.org/packages?name=syslog-ng&branch=v3.10" \
-      org.label-schema.build-date = "2019-07-09"
+      org.label-schema.url = "https://pkgs.alpinelinux.org/packages?name=syslog-ng" \
+      org.label-schema.build-date = "2020-08-25"
 
 RUN apk update && \
     apk upgrade && \
