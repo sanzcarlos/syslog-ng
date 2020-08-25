@@ -12,6 +12,7 @@ jobs:
       uses: docker/build-push-action@v1
       with:
         username: ${{ secrets.DOCKER_USERNAME }}
+        # Si tenemos habilitado Access Token, tenemos que poner ese token en la variable DOCKER_PASSWORD
         password: ${{ secrets.DOCKER_PASSWORD }}
         repository: ${{ github.repository }}
         tag_with_ref: true
