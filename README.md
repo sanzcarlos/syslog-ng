@@ -1,2 +1,2 @@
 # syslog-ng-docker
-Docker images for syslog-ng
+Imagen de Docker para un servidor de Syslog-NG
