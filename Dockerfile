@@ -1,6 +1,6 @@
 FROM alpine
 
-MAINTAINER Carlos Sanz <carlos.sanzpenas@gmail.com>
+LABEL maintainer="Carlos Sanz <carlos.sanzpenas@gmail.com>"
 
 LABEL org.label-schema.vendor = "Personal" \
       org.label-schema.name = "Syslog-NG" \
